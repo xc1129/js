@@ -1,0 +1,21 @@
+<html>
+    <head><title>error catch</title></head>
+    <body>
+        <script type="text/javascript">
+            try
+            {
+                var a=3;
+                alert("this is code inside the try clause");
+                if(a!=2)
+                    throw"you are a bitch!";
+            }
+            catch(exception)
+            {
+                if(typeof(exception) == "string")
+                {
+                    alert(exception);
+                }
+            }
+        </script>
+    </body>
+</html>
