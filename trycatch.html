@@ -2,12 +2,15 @@
     <head><title>error catch</title></head>
     <body>
         <script type="text/javascript">
+            window.defaultStatus = "test error try and catch";
             try
             {
                 var a=3;
                 alert("this is code inside the try clause");
                 if(a!=2)
+                {
                     throw"you are a bitch!";
+                }
             }
             catch(exception)
             {
