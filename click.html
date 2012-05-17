@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<script type="text/javascript">
+var clickNum=0;
+function button_click()
+{
+    clickNum++;
+    document.form1.myButton.value="button click "+clickNum+" times";
+}
+function my_reset()
+{
+    document.form1.myButton.value="button click 0 times";
+}
+</script>
+
+</head>
+<body>
+
+    <form action="" name="form1">
+        <input type="button" name="myButton" value="button click 0 times" onclick="button_click()"/>
+        <input type="button" name="myReset" value="reset" onclick="my_reset()"/>
+    </form>
+</body>
+</html>
+
+
