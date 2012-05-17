@@ -5,7 +5,12 @@
 <head>
     <title></title>
 <script type="text/javascript">
-var newWindow = window.open("click.html","clickwindow","width=250,height=250");
+var newWindow = window.open("","clickwindow","width=250,height=250");
+newWindow.document.open();
+newWindow.document.write("<h4>hello</h4>");
+newWindow.document.write("<p>Welcome to my web!</p>");
+newWindow.document.close();
+newWindow.document.wirte("wocaonimagebidelaji!");
 </script>
 
 </head>
