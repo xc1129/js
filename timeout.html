@@ -11,12 +11,19 @@ function timeout()
     timerID=setTimeout("alert('caonimabi')",3000);
     alert('timer set');
 }
+
+function timeclean()
+{
+    clearTimeout(timerID);
+    alert("timer has been cleaned!");
+}
 </script>
 
 </head>
 
 <body onload="timeout()">
 
+    <input type="button" value="clean timer" onclick="timeclean()"/>
 </body>
 </html>
 
