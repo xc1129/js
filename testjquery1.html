@@ -9,7 +9,13 @@
 <script type="text/javascript">
 function document_ready()
 {
-    alert("hello jquery");
+    alert("caonimabi");
+    var a=$(document.createElement("a"))
+         .attr("id","myLink")
+         .attr("href","http://localhost/js/click.html")
+         .attr("title","click")
+         .text("click to link");
+    $(document.body).append(a);
 }
 
 $(document).ready(document_ready);
