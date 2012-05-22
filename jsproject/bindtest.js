@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $('#clickit').click(function(){
-        alert("caonimabi");
-        $('#content').toggleClass('hidden');
+        $.get("1.php",function(data){
+            $('#content').html($('#content').text()+data);
+        });
     });
 });
