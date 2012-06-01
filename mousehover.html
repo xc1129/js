@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="1.css" type="text/css" />
+    <style type="text/css">
+        .hoverme{
+            width:200px;
+            height:150px;
+            border:1px solid blue;
+        }
+    </style>
+    <script type="text/javascript" src="jquery/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="" ></script>
+</head>
+
+<body>
+    <div id="tip" style="display:none;">Ya! I am a tooltip!</div>
+    <div class="hoverme">Hover me for a tooltip.</div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+            $('.hoverme').hover(function(){
+                $('#tip').fadeIn('slow');
+                },
+                function()
+                {
+                $('#tip').fadeOut('slow');
+                });
+            $('.hoverme').mousemove(function(e){
+                var topPosition=e.pageY+5;
+                var leftPosition=e.pageX+5;
+                $('#tip').css({
+                    'top':topPosition+'px',
+                    'left':leftPosition+'px'
+                    });
+                });
+            });
+</script>
+
+
+</html>
+
+
