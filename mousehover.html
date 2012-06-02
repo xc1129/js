@@ -17,19 +17,12 @@
 </head>
 
 <body>
-    <div id="tip" style="display:none;">Ya! I am a tooltip!</div>
+    <div id="tip" style="display:none;position:absolute;">Ya! I am a tooltip!</div>
     <div class="hoverme">Hover me for a tooltip.</div>
 </body>
 
 <script type="text/javascript">
     $(document).ready(function(){
-            $('.hoverme').hover(function(){
-                $('#tip').fadeIn('slow');
-                },
-                function()
-                {
-                $('#tip').fadeOut('slow');
-                });
             $('.hoverme').mousemove(function(e){
                 var topPosition=e.pageY+5;
                 var leftPosition=e.pageX+5;
@@ -38,6 +31,14 @@
                     'left':leftPosition+'px'
                     });
                 });
+            $('.hoverme').hover(function(){
+                $('#tip').fadeIn('slow');
+                },
+                function()
+                {
+                $('#tip').fadeOut('slow');
+                });
+
             });
 </script>
 
